@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dandaqk0tnkgw"]
+
+[ext_resource type="Script" path="res://scripts/theatre.gd" id="1_1ch1e"]
+[ext_resource type="Texture2D" uid="uid://7w4xlq4qcqoi" path="res://art/affiche.JPG" id="1_u7ris"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="3_eetop"]
+
+[node name="theatre" type="Node2D"]
+position = Vector2(190, 124)
+script = ExtResource("1_1ch1e")
+
+[node name="Affiche" type="Sprite2D" parent="."]
+position = Vector2(386, 201)
+texture = ExtResource("1_u7ris")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("3_eetop")]
+position = Vector2(-156, -124)

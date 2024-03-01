@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc6nx3pca6pdq"]
+
+[ext_resource type="Script" path="res://scripts/photosanniv.gd" id="1_mbm8q"]
+[ext_resource type="Texture2D" uid="uid://brlv1uv2rfb8y" path="res://art/photos_anniv.jpg" id="1_rqmy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmp1o"]
+size = Vector2(580, 480)
+
+[node name="photosanniv" type="Node2D"]
+script = ExtResource("1_mbm8q")
+
+[node name="photosanniv" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(578, 323)
+texture = ExtResource("1_rqmy6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 2
+position = Vector2(572, 320)
+shape = SubResource("RectangleShape2D_vmp1o")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

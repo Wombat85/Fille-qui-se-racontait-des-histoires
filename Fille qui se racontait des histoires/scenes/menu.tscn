@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://df76fxtxaar23"]
+
+[ext_resource type="AudioStream" uid="uid://dn0nt5juxkrwt" path="res://audios/LukeHall-Dystopia.mp3" id="1_r6rgo"]
+[ext_resource type="Texture2D" uid="uid://dkrcupnc1rshy" path="res://art/Couv.jpg" id="2_yp5fe"]
+[ext_resource type="Theme" uid="uid://caa1cfafpetid" path="res://themes/bouton.tres" id="3_2ayy3"]
+[ext_resource type="Script" path="res://scripts/Jouer.gd" id="4_ruyc8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cib68"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_x1bfk"]
+Panel/styles/panel = SubResource("StyleBoxFlat_cib68")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxqav"]
+bg_color = Color(0.866667, 0.101961, 0.0392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 33.0
+expand_margin_top = 20.0
+expand_margin_right = 27.0
+expand_margin_bottom = 20.0
+
+[node name="Menu" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 3191.0
+offset_bottom = 1957.0
+theme = SubResource("Theme_x1bfk")
+
+[node name="AudioMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_r6rgo")
+autoplay = true
+
+[node name="Couv" type="Sprite2D" parent="."]
+position = Vector2(770, 316)
+scale = Vector2(0.041, 0.041)
+texture = ExtResource("2_yp5fe")
+
+[node name="Jouer" type="Button" parent="."]
+offset_left = 190.0
+offset_top = 197.0
+offset_right = 419.0
+offset_bottom = 286.0
+theme = ExtResource("3_2ayy3")
+theme_override_font_sizes/font_size = 50
+text = "Jouer"
+script = ExtResource("4_ruyc8")
+
+[node name="Crédits" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 363.0
+offset_right = 392.0
+offset_bottom = 432.0
+theme = ExtResource("3_2ayy3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxqav")
+text = "Crédits"
+
+[connection signal="pressed" from="Jouer" to="Jouer" method="_on_pressed"]

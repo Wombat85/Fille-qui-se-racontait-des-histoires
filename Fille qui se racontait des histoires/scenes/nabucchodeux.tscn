@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxdm0h16laygd"]
+
+[ext_resource type="Script" path="res://scripts/nabucchodeux.gd" id="1_w2fdc"]
+[ext_resource type="FontFile" uid="uid://n8lpul5bhrqu" path="res://polices/FontsFree-Net-LeagueSpartan-Regular.ttf" id="2_5jaxt"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="3_siwgp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0wd1"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="nabucchodeux" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w2fdc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j0wd1")
+
+[node name="Na" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_5jaxt")
+theme_override_font_sizes/normal_font_size = 56
+text = "                            Na"
+
+[node name="bu" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_5jaxt")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                 bu"
+
+[node name="cc" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.952941, 0.101961, 1)
+theme_override_fonts/normal_font = ExtResource("2_5jaxt")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                     cc"
+
+[node name="ho" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.498039, 0.0313726, 1)
+theme_override_fonts/normal_font = ExtResource("2_5jaxt")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                        ho"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+z_index = 3
+layout_mode = 0
+offset_left = 39.0
+offset_top = 117.0
+offset_right = 1133.0
+offset_bottom = 607.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_5jaxt")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[b][i][font_size=25]Principe :[/font_size][/i][/b] 3 heures pour réaliser un détournement du jeu de l'oie.
+ 
+[b][i][font_size=25]Outils :[/font_size][/i][/b]  - Informations sur le jeu de l'oie (existe depuis l'Antiquité, a évolué à travers        le temps, a été utilisé à des fins satiriques ou pamphlétaires)
+- Les 11 éléments des guidelines de Mary Flanagan et Helen Nissembaum,          
+dans [i][font_size=25]Values At Play In Digital Game[/font_size][/i], MIT Press, 2014
+
+[i][b][font_size= 25]Ce que nous avons gardé du jeu de l'oie :[/font_size][/b] [/i]  une partie des règles classiques, à savoir avancer à l’aide d’un dé (aléatoire), obtenir des bonus pour avancer davantage ou         des malus qui font reculer (aléatoire), un plateau de 63 cases, une victoire pour le premier joueur à terminer « pile » sur la case finale
+
+[i][b][font_size=25]Le pitch :[/font_size][/b][/i] 
+Chaque joueur est un chef d’équipe en charge de mener à bien la construction d’un opéra, du projet initial à la tenue de la première représentation. 
+Le but du jeu est d’atteindre la dernière case en premier. "
+fit_content = true
+scroll_active = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 987.0
+offset_top = 560.0
+offset_right = 1121.0
+offset_bottom = 627.0
+theme = ExtResource("3_siwgp")
+text = "Suite"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

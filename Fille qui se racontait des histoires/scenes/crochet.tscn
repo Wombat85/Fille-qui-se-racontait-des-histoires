@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://4tebvyebhda1"]
+
+[ext_resource type="Texture2D" uid="uid://dx77od78noq7l" path="res://art/amigurumi.JPG" id="1_2ukfg"]
+[ext_resource type="Script" path="res://scripts/crochet.gd" id="1_ivakf"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="3_0tlha"]
+
+[node name="crochet" type="Node2D"]
+script = ExtResource("1_ivakf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+texture = ExtResource("1_2ukfg")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("3_0tlha")]
+position = Vector2(29, 0)

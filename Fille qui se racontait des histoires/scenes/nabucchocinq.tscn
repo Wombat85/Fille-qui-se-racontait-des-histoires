@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmtbxh3u4dn3y"]
+
+[ext_resource type="FontFile" uid="uid://n8lpul5bhrqu" path="res://polices/FontsFree-Net-LeagueSpartan-Regular.ttf" id="1_0gt5e"]
+[ext_resource type="Script" path="res://scripts/nabucchocinq.gd" id="1_ku1sk"]
+[ext_resource type="Texture2D" uid="uid://u205tfulj7rg" path="res://art/nabuccho.jpg" id="2_mykxn"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="4_junoj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr6im"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="nabucchocinq" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ku1sk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xr6im")
+
+[node name="Na" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gt5e")
+theme_override_font_sizes/normal_font_size = 56
+text = "                            Na"
+
+[node name="bu" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gt5e")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                 bu"
+
+[node name="cc" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.952941, 0.101961, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gt5e")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                     cc"
+
+[node name="ho" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.498039, 0.0313726, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gt5e")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                        ho"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+z_index = 3
+layout_mode = 0
+offset_left = 349.0
+offset_top = 115.0
+offset_right = 1162.0
+offset_bottom = 1431.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gt5e")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Les cases offrent toujours un [b][font_size=25]bonus[/font_size][/b] ou un [b][font_size=25]malus[/font_size][/b]. Le bonus se
+caractérise par le fait [color=blue]d’avancer d’une case supplémentaire[/color].
+Le malus fait [color=red]reculer le joueur de deux cases[/color]. Un [b][font_size=25]malus spécial[/font_size][/b]
+(« Ruines antiques découvertes sur le chantier », case unique 
+sur le plateau) fait [color=red]revenir au départ[/color]. Un bonus spécial (case unique également) fait [color=blue]avancer de trois cases[/color] (six s’il est doublé).
+
+Le joueur qui commence est celui qui chante le mieux.
+Chaque joueur lance à son tour [b][font_size=24]le dé classique + son dé
+personnalisé[/font_size][/b]. Son dé personnalisé lui donne une couleur couplée 
+à un symbole. S’il tombe sur une case de [b][font_size=24]la couleur de son dé
+personnalisé[/font_size][/b], le bonus est doublé ou le malus annulé. 
+Les effets de l’éventuelle deuxième case sur laquelle il atterrit 
+par rebond ne sont pas pris en compte.
+
+Lorsqu’un joueur tombe sur une case « Dimanche », 
+il peut [color=orange]remplacer une ou deux faces de son dé.[/color]"
+fit_content = true
+
+[node name="Opéra" type="Sprite2D" parent="."]
+position = Vector2(168, 349)
+scale = Vector2(0.184603, 0.184603)
+texture = ExtResource("2_mykxn")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("4_junoj")]
+position = Vector2(176, 529)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dy2ym8wpm5oug"
+path="res://.godot/imported/carnet.dialogue-2f3e62d49940560117c987c410097538.tres"
+
+[deps]
+
+source_file="res://dialogues/carnet.dialogue"
+dest_files=["res://.godot/imported/carnet.dialogue-2f3e62d49940560117c987c410097538.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyuuewmftirmc"]
+
+[ext_resource type="Texture2D" uid="uid://b1ahtxrxxs6yq" path="res://art/petitordi.jpg" id="1_2tutw"]
+[ext_resource type="Script" path="res://scripts/petitordi.gd" id="1_av3ot"]
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_0r1t5"]
+
+[node name="petitordi" type="Node2D"]
+script = ExtResource("1_av3ot")
+
+[node name="Petitordi" type="Sprite2D" parent="."]
+position = Vector2(575, 325)
+texture = ExtResource("1_2tutw")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("3_0r1t5")]
+position = Vector2(171, -15)

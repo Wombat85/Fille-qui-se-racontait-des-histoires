@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bsvlbq3ifl18q"
+path="res://.godot/imported/Bukhari Script.ttf-32cf51e13578be39fb729e8497e3b688.fontdata"
+
+[deps]
+
+source_file="res://polices/Bukhari Script.ttf"
+dest_files=["res://.godot/imported/Bukhari Script.ttf-32cf51e13578be39fb729e8497e3b688.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

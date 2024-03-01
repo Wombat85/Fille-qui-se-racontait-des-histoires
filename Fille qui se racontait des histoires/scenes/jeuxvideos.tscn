@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://ibqve0qm72c2"]
+
+[ext_resource type="Script" path="res://scripts/jeuxvideos.gd" id="1_i00tg"]
+[ext_resource type="Texture2D" uid="uid://dkaoq25x8twwx" path="res://art/jeuxvideos.jpg" id="1_sjraw"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="3_3vab5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72dyy"]
+size = Vector2(208, 204)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ypa"]
+size = Vector2(214, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ce5oc"]
+size = Vector2(214, 207)
+
+[node name="jeuxvideos" type="Node2D"]
+script = ExtResource("1_i00tg")
+
+[node name="Jeuxvideos" type="Sprite2D" parent="."]
+position = Vector2(575, 326)
+texture = ExtResource("1_sjraw")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("3_3vab5")]
+position = Vector2(159, 517)
+
+[node name="STJV area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="STJV area"]
+position = Vector2(286, 255)
+shape = SubResource("RectangleShape2D_72dyy")
+
+[node name="ATRIUM area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ATRIUM area"]
+position = Vector2(523, 260.5)
+shape = SubResource("RectangleShape2D_n8ypa")
+
+[node name="fille area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fille area"]
+position = Vector2(755, 256.5)
+shape = SubResource("RectangleShape2D_ce5oc")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="input_event" from="STJV area" to="." method="_on_stjv_area_input_event"]
+[connection signal="mouse_entered" from="STJV area" to="." method="_on_stjv_area_mouse_entered"]
+[connection signal="mouse_exited" from="STJV area" to="." method="_on_stjv_area_mouse_exited"]
+[connection signal="input_event" from="ATRIUM area" to="." method="_on_atrium_area_input_event"]
+[connection signal="mouse_entered" from="ATRIUM area" to="." method="_on_atrium_area_mouse_entered"]
+[connection signal="mouse_exited" from="ATRIUM area" to="." method="_on_atrium_area_mouse_exited"]
+[connection signal="input_event" from="fille area" to="." method="_on_fille_area_input_event"]
+[connection signal="mouse_entered" from="fille area" to="." method="_on_fille_area_mouse_entered"]
+[connection signal="mouse_exited" from="fille area" to="." method="_on_fille_area_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg23i8inetqur"]
+
+[ext_resource type="Script" path="res://scripts/nabuccho.gd" id="1_sjhk1"]
+[ext_resource type="FontFile" uid="uid://n8lpul5bhrqu" path="res://polices/FontsFree-Net-LeagueSpartan-Regular.ttf" id="1_yg6pl"]
+[ext_resource type="Texture2D" uid="uid://b75ks6nwrxavi" path="res://art/opéra.jpg" id="2_tn8ml"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="3_xyloc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c23kb"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Nabuccho" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sjhk1")
+metadata/_edit_horizontal_guides_ = [329.0]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c23kb")
+
+[node name="Na" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_yg6pl")
+theme_override_font_sizes/normal_font_size = 56
+text = "                            Na"
+
+[node name="bu" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_yg6pl")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                 bu"
+
+[node name="cc" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.952941, 0.101961, 1)
+theme_override_fonts/normal_font = ExtResource("1_yg6pl")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                     cc"
+
+[node name="ho" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.498039, 0.0313726, 1)
+theme_override_fonts/normal_font = ExtResource("1_yg6pl")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                        ho"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+z_index = 3
+layout_mode = 0
+offset_left = 66.0
+offset_top = 151.0
+offset_right = 576.0
+offset_bottom = 591.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_yg6pl")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[b][i][font_size=25]Quoi ?[/font_size][/i][/b] Atelier création de jeu de société, dans le cadre du festival du jeu vidéo de l’association [font_size=25][i]Je vis des mots[/i][/font_size]
+ 
+[i][b][font_size=25]Quand ?[/font_size][/b][/i] 02/12/2023
+
+[i][b][font_size= 25]Où ?[/font_size][/b] [/i] Université Paul-Valéry Montpellier 3
+
+[i][b][font_size=25]Avec qui ?[/font_size][/b][/i] 
+Elise de la licence professionnelle métiers du jeu vidéo, facilitatrice
+Maxime, autre participant
+"
+
+[node name="Opéra" type="Sprite2D" parent="."]
+position = Vector2(859, 336)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_tn8ml")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 987.0
+offset_top = 560.0
+offset_right = 1121.0
+offset_bottom = 627.0
+theme = ExtResource("3_xyloc")
+text = "Suite"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

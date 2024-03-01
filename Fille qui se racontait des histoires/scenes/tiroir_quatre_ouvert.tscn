@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh4cqyjaq7dst"]
+
+[ext_resource type="Script" path="res://scripts/tiroir_quatre_ouvert.gd" id="1_l1177"]
+[ext_resource type="Texture2D" uid="uid://cha7pt16vftrr" path="res://art/enveloppes.jpg" id="2_hhlof"]
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_gmpqi"]
+
+[node name="tiroir_quatre_ouvert" type="Node2D"]
+script = ExtResource("1_l1177")
+
+[node name="tiroirquatre" type="Sprite2D" parent="."]
+position = Vector2(576, 322)
+texture = ExtResource("2_hhlof")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("3_gmpqi")]
+position = Vector2(36, -19)

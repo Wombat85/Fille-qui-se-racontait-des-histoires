@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnsdqiu1aael2"]
+
+[ext_resource type="Script" path="res://scripts/tiroir_deux_ouvert.gd" id="1_d3ger"]
+[ext_resource type="Texture2D" uid="uid://doinxb0i7qem8" path="res://art/manus.jpg" id="2_acpgb"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="3_hph8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyh7c"]
+size = Vector2(575, 407)
+
+[node name="tiroir_deux_ouvert" type="Node2D"]
+script = ExtResource("1_d3ger")
+
+[node name="tiroirdeuxouvert" type="Sprite2D" parent="."]
+position = Vector2(579, 323)
+texture = ExtResource("2_acpgb")
+
+[node name="tiroirmanus" type="Area2D" parent="."]
+
+[node name="tiroirmanusshape" type="CollisionShape2D" parent="tiroirmanus"]
+position = Vector2(593.5, 301.5)
+shape = SubResource("RectangleShape2D_jyh7c")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("3_hph8w")]
+position = Vector2(41, -19)
+
+[connection signal="input_event" from="tiroirmanus" to="." method="_on_tiroirmanus_input_event"]
+[connection signal="mouse_entered" from="tiroirmanus" to="." method="_on_tiroirmanus_mouse_entered"]
+[connection signal="mouse_exited" from="tiroirmanus" to="." method="_on_tiroirmanus_mouse_exited"]

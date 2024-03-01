@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxcx5sj1n45tc"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0t00p"]
+[ext_resource type="PackedScene" uid="uid://h73dit8cqy22" path="res://scenes/Book.tscn" id="2_3xk3y"]
+[ext_resource type="Script" path="res://scripts/CollisionShape2D.gd" id="2_idl4b"]
+[ext_resource type="Texture2D" uid="uid://ca2j5armr0b5o" path="res://art/fond.jpg" id="4_iwhee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lx3o"]
+size = Vector2(3.02053, 5.00359)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_0t00p")
+
+[node name="Zone" type="Area2D" parent="."]
+z_index = 3
+position = Vector2(876, 556)
+scale = Vector2(44.032, 36.174)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zone"]
+position = Vector2(0.897078, -0.87079)
+shape = SubResource("RectangleShape2D_2lx3o")
+script = ExtResource("2_idl4b")
+
+[node name="Book" parent="." instance=ExtResource("2_3xk3y")]
+offset_left = 86.0
+offset_top = 14.0
+offset_right = 943.0
+offset_bottom = 634.0
+scale = Vector2(0.97, 0.963)
+border_width = 30
+
+[node name="Fond" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(393, 215)
+scale = Vector2(1.967, 2.035)
+texture = ExtResource("4_iwhee")
+
+[connection signal="area_entered" from="Zone" to="Zone/CollisionShape2D" method="_on_zone_area_entered"]
+[connection signal="area_exited" from="Zone" to="Zone/CollisionShape2D" method="_on_zone_area_exited"]

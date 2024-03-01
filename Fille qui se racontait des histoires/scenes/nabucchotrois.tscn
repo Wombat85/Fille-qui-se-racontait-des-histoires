@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdx60yp8oyrja"]
+
+[ext_resource type="Script" path="res://scripts/nabucchotrois.gd" id="1_ffjws"]
+[ext_resource type="FontFile" uid="uid://n8lpul5bhrqu" path="res://polices/FontsFree-Net-LeagueSpartan-Regular.ttf" id="2_h0myp"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="3_nnwim"]
+[ext_resource type="Texture2D" uid="uid://vkglhst5jp1n" path="res://art/truelle.png" id="4_4xinc"]
+[ext_resource type="Texture2D" uid="uid://c7ovk1pulae5h" path="res://art/compas.png" id="5_kfgct"]
+[ext_resource type="Texture2D" uid="uid://dfebt5lr3l0sd" path="res://art/euro.png" id="6_a5ttt"]
+[ext_resource type="Texture2D" uid="uid://7yg8ringr3tc" path="res://art/note.png" id="7_7eypr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or2nh"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="nabucchotrois" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ffjws")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_or2nh")
+
+[node name="Na" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_h0myp")
+theme_override_font_sizes/normal_font_size = 56
+text = "                            Na"
+
+[node name="bu" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_h0myp")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                 bu"
+
+[node name="cc" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.952941, 0.101961, 1)
+theme_override_fonts/normal_font = ExtResource("2_h0myp")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                     cc"
+
+[node name="ho" type="RichTextLabel" parent="Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 1091.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(1, 0.498039, 0.0313726, 1)
+theme_override_fonts/normal_font = ExtResource("2_h0myp")
+theme_override_font_sizes/normal_font_size = 56
+text = "                                        ho"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 107.0
+offset_right = 1119.0
+offset_bottom = 628.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_h0myp")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[b][i][font_size=25]Mécaniques/règles :[/font_size][/i][/b] 
+
+Avant de commencer, les joueurs personnalisent leur dé (influence : Dice Forge) 
+
+Ils ont le choix entre quatre faces différentes, apposables sur les six côtés de leur dé :
+
+[color=blue]Face bleue/truelle : [/color]artisan
+
+[color=gold]Face jaune/compas : [/color]architecte
+
+[color=orange]Face orange/euro : [/color]commissionnaire
+
+[color=red]Face rouge/note de musique : [/color]artiste
+
+Le plateau est un calendrier représentant neuf semaines de sept jours chacune. 
+Chaque semaine se termine par une case « Dimanche ». 
+Les autres cases sont toutes des cases de couleur (bleue, jaune, orange, 
+rouge, ou bicolore avec deux de ces quatre couleurs).
+"
+fit_content = true
+
+[node name="Truelle" type="Sprite2D" parent="Panel/HBoxContainer"]
+z_index = 1
+position = Vector2(384, 184)
+scale = Vector2(0.0869583, 0.0921041)
+texture = ExtResource("4_4xinc")
+
+[node name="Compas" type="Sprite2D" parent="Panel/HBoxContainer"]
+z_index = 1
+position = Vector2(430, 237)
+scale = Vector2(0.0869583, 0.0921041)
+texture = ExtResource("5_kfgct")
+
+[node name="Note" type="Sprite2D" parent="Panel/HBoxContainer"]
+z_index = 1
+position = Vector2(487.095, 354.519)
+scale = Vector2(0.0160459, 0.0160459)
+texture = ExtResource("7_7eypr")
+
+[node name="Euro" type="Sprite2D" parent="Panel/HBoxContainer"]
+z_index = 1
+position = Vector2(488, 299)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("6_a5ttt")
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 987.0
+offset_top = 560.0
+offset_right = 1121.0
+offset_bottom = 627.0
+theme = ExtResource("3_nnwim")
+text = "Suite"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

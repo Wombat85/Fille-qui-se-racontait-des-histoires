@@ -1,0 +1,364 @@
+[gd_scene load_steps=54 format=3 uid="uid://blq8tdthysi2k"]
+
+[ext_resource type="Texture2D" uid="uid://b6o2pskccd3ai" path="res://art/bureau1.jpg" id="2_ie2f8"]
+[ext_resource type="PackedScene" uid="uid://coa4keram5y7q" path="res://scenes/interaction_area.tscn" id="3_1nhb2"]
+[ext_resource type="PackedScene" uid="uid://dwg2jnmlpedx6" path="res://scenes/interaction_area_2.tscn" id="4_5b31n"]
+[ext_resource type="Texture2D" uid="uid://lvrubp2cnn0f" path="res://art/bureau2.jpg" id="4_ci5lh"]
+[ext_resource type="Texture2D" uid="uid://b5a4fxx4bwhg8" path="res://art/imprimante1.jpg" id="4_xkx3f"]
+[ext_resource type="Texture2D" uid="uid://b6t6ohamkinvx" path="res://art/bureau3.jpg" id="5_na3y3"]
+[ext_resource type="Texture2D" uid="uid://be1034d25vfrs" path="res://art/imprimante2.jpg" id="5_qrsfn"]
+[ext_resource type="Texture2D" uid="uid://cp0ewcmy3yics" path="res://art/imprimante3.jpg" id="6_fgq4b"]
+[ext_resource type="Texture2D" uid="uid://i0o0v3souepn" path="res://art/bureau4.jpg" id="6_v5a4m"]
+[ext_resource type="Texture2D" uid="uid://b2mxstp4lxtgb" path="res://art/bureau5.jpg" id="7_2awyi"]
+[ext_resource type="Texture2D" uid="uid://b4xsh5eqkgofl" path="res://art/imprimante4.jpg" id="7_5t6wp"]
+[ext_resource type="Texture2D" uid="uid://fvwgtiij0p57" path="res://art/bureau6.jpg" id="8_83b6x"]
+[ext_resource type="Texture2D" uid="uid://ncnixekf7hgh" path="res://art/imprimante5.jpg" id="8_yn74d"]
+[ext_resource type="Texture2D" uid="uid://pxnuuws7i4kw" path="res://art/bureau7.jpg" id="9_3io0q"]
+[ext_resource type="Texture2D" uid="uid://bguq780d8167q" path="res://art/bureau8.jpg" id="10_h1nlr"]
+[ext_resource type="Texture2D" uid="uid://cguq55pjuiqg4" path="res://art/tiroir2_1.JPG" id="16_xxbge"]
+[ext_resource type="Texture2D" uid="uid://dv2kuo3ut1s3v" path="res://art/tiroir2_2.JPG" id="17_ex80h"]
+[ext_resource type="Texture2D" uid="uid://dpcli60lndotj" path="res://art/tiroir2_3.JPG" id="18_vuglt"]
+[ext_resource type="Texture2D" uid="uid://iil4vakf2y8v" path="res://art/tiroir2_4.JPG" id="19_haei0"]
+[ext_resource type="Texture2D" uid="uid://dc0gaat2788l5" path="res://art/tiroir2_5.JPG" id="20_3dxnu"]
+[ext_resource type="Texture2D" uid="uid://t8qnvg6wv4on" path="res://art/tiroir2_6.JPG" id="21_oy51v"]
+[ext_resource type="Texture2D" uid="uid://bh58ds24kjc3o" path="res://art/tiroir2_7.JPG" id="22_58s8c"]
+[ext_resource type="Texture2D" uid="uid://crpo15wviaxjx" path="res://art/tiroir4_1.jpg" id="23_f3csf"]
+[ext_resource type="Texture2D" uid="uid://dcrjyrg8jvibn" path="res://art/tiroir3_1.jpg" id="23_g8lqr"]
+[ext_resource type="Texture2D" uid="uid://drqaol66nq43j" path="res://art/tiroir3_2.jpg" id="24_ej01w"]
+[ext_resource type="Texture2D" uid="uid://dbg03xs36l1ai" path="res://art/tiroir4_2.jpg" id="24_twm3r"]
+[ext_resource type="Texture2D" uid="uid://clki76xcf2rte" path="res://art/tiroir3_3.jpg" id="25_c00xq"]
+[ext_resource type="Texture2D" uid="uid://xcqvqvmcdyj7" path="res://art/tiroir4_3.jpg" id="25_rg0cj"]
+[ext_resource type="Texture2D" uid="uid://d0kj01d7i0nh7" path="res://art/tiroir3_4.jpg" id="26_a4uud"]
+[ext_resource type="Texture2D" uid="uid://dejiiec7saxc3" path="res://art/tiroir4_4.jpg" id="26_oscuu"]
+[ext_resource type="Texture2D" uid="uid://cksop1u6rklv7" path="res://art/tiroir3_5.jpg" id="27_f7ey8"]
+[ext_resource type="Texture2D" uid="uid://y7b3d1dew8gj" path="res://art/tiroir4_5.jpg" id="27_gvkwq"]
+[ext_resource type="Texture2D" uid="uid://mefimyvp3w8n" path="res://art/tiroir4_6.jpg" id="28_ib2qy"]
+[ext_resource type="Texture2D" uid="uid://dvn02jub7q87g" path="res://art/tiroir3_6.jpg" id="28_phxmr"]
+[ext_resource type="Texture2D" uid="uid://drespqdtxm2k8" path="res://art/tiroir3_7.jpg" id="29_3p13b"]
+[ext_resource type="Texture2D" uid="uid://dyutqciifd5wg" path="res://art/tiroir4_7.jpg" id="29_dxhj7"]
+[ext_resource type="Texture2D" uid="uid://dkq6govm5xkhi" path="res://art/porte_1.jpg" id="37_5s62r"]
+[ext_resource type="AudioStream" uid="uid://cw8fs5xlwlwg4" path="res://audios/DRWRWood_Tiroir en bois ouverture (ID 1499)_LS.wav" id="37_08loa"]
+[ext_resource type="Texture2D" uid="uid://bad0wj8x6voyd" path="res://art/porte_2.jpg" id="38_7jte7"]
+[ext_resource type="AudioStream" uid="uid://dl8u8mqououwi" path="res://audios/DOORCreak_Grincement de porte (ID 0302)_LS.wav" id="40_fcvwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_giwfc"]
+size = Vector2(131, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymjtl"]
+size = Vector2(59, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yfhd"]
+size = Vector2(64.25, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7chy8"]
+size = Vector2(59, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crwtm"]
+size = Vector2(71, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm33c"]
+size = Vector2(120, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htuef"]
+size = Vector2(170.25, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chhrs"]
+size = Vector2(120, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb542"]
+size = Vector2(94, 52.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih01p"]
+size = Vector2(70, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw7rm"]
+size = Vector2(86, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b7l0"]
+size = Vector2(93.5, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rvl1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xkx3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qrsfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fgq4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5t6wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yn74d")
+}],
+"loop": true,
+"name": &"imprimante",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ci5lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_na3y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v5a4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2awyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_83b6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3io0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h1nlr")
+}],
+"loop": true,
+"name": &"ouverture_tiroir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xxbge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ex80h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vuglt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_haei0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3dxnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oy51v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_58s8c")
+}],
+"loop": true,
+"name": &"ouverture_tiroir_deux",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f3csf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_twm3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rg0cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_oscuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gvkwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ib2qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_dxhj7")
+}],
+"loop": true,
+"name": &"ouverture_tiroir_quatre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g8lqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ej01w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c00xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_a4uud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_f7ey8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_phxmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3p13b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3p13b")
+}],
+"loop": true,
+"name": &"ouverture_tiroir_trois",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ie2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_5s62r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_7jte7")
+}],
+"loop": true,
+"name": &"porte",
+"speed": 3.0
+}]
+
+[node name="bureau" type="Node2D"]
+
+[node name="Bureau" type="Sprite2D" parent="."]
+position = Vector2(579, 321)
+texture = ExtResource("2_ie2f8")
+
+[node name="InteractionArea" parent="Bureau" instance=ExtResource("3_1nhb2")]
+position = Vector2(240, 73)
+
+[node name="collisionprint" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+unique_name_in_owner = true
+position = Vector2(-436, -273)
+shape = SubResource("RectangleShape2D_giwfc")
+
+[node name="collisioncrochet" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+unique_name_in_owner = true
+position = Vector2(-150, 135)
+shape = SubResource("RectangleShape2D_ymjtl")
+
+[node name="collisionporte" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-382, 80)
+shape = SubResource("RectangleShape2D_ymjtl")
+
+[node name="collisiontiroir" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-9, -1)
+shape = SubResource("RectangleShape2D_5yfhd")
+
+[node name="collisiontiroir2" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-12, 58)
+shape = SubResource("RectangleShape2D_5yfhd")
+
+[node name="collisiontiroir3" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-12, 119)
+shape = SubResource("RectangleShape2D_5yfhd")
+
+[node name="collisiontiroir4" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-13, 178)
+shape = SubResource("RectangleShape2D_5yfhd")
+
+[node name="collisioncahier" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-60, -143)
+shape = SubResource("RectangleShape2D_5yfhd")
+
+[node name="collisionedition" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-335.5, -292.5)
+shape = SubResource("RectangleShape2D_7chy8")
+
+[node name="collisionmanette" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+unique_name_in_owner = true
+position = Vector2(-305.5, -78)
+shape = SubResource("RectangleShape2D_crwtm")
+
+[node name="InteractionArea2" parent="Bureau" instance=ExtResource("4_5b31n")]
+
+[node name="collisionanimation" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(45, -229)
+shape = SubResource("RectangleShape2D_lm33c")
+
+[node name="collisiongrandordi" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(6.75, -89)
+shape = SubResource("RectangleShape2D_htuef")
+
+[node name="collisionpetitordi" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(-189, -46)
+shape = SubResource("RectangleShape2D_chhrs")
+
+[node name="collisionBU" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(179, -198.5)
+shape = SubResource("RectangleShape2D_pb542")
+
+[node name="collisionlivres" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(197, -25.25)
+shape = SubResource("RectangleShape2D_pb542")
+
+[node name="collisiontheatre" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(332, -249)
+shape = SubResource("RectangleShape2D_ih01p")
+
+[node name="collisiontableau" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(-333, -255)
+shape = SubResource("RectangleShape2D_hw7rm")
+
+[node name="collisionpoubelle" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
+position = Vector2(-42.75, 170.5)
+shape = SubResource("RectangleShape2D_0b7l0")
+
+[node name="Lecteuranimation" type="AnimatedSprite2D" parent="Bureau"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_rvl1l")
+animation = &"porte"
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer2" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer3" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer4" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer5" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="bruit_tiroir" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("37_08loa")
+
+[node name="Timer6" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.7
+
+[node name="bruit_porte" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("40_fcvwr")
+
+[connection signal="input_event" from="Bureau/InteractionArea2" to="Bureau/InteractionArea2" method="_on_input_event"]
+[connection signal="animation_finished" from="Bureau/Lecteuranimation" to="Bureau/Lecteuranimation" method="_on_animation_finished"]
+[connection signal="timeout" from="Timer" to="Bureau/InteractionArea" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Bureau/InteractionArea" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="Bureau/InteractionArea" method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer4" to="Bureau/InteractionArea" method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Timer5" to="Bureau/InteractionArea" method="_on_timer_5_timeout"]
+[connection signal="timeout" from="Timer6" to="Bureau/InteractionArea" method="_on_timer_6_timeout"]

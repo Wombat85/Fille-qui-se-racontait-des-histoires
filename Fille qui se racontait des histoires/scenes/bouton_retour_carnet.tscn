@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cstpusrc8pqrr"]
+
+[ext_resource type="Script" path="res://scripts/bouton_retour_carnet.gd" id="1_j3gqp"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="2_fu85b"]
+
+[node name="bouton_retour_carnet" type="Node2D"]
+script = ExtResource("1_j3gqp")
+
+[node name="Retour" type="Button" parent="."]
+offset_left = 825.0
+offset_top = 32.0
+offset_right = 959.0
+offset_bottom = 99.0
+theme = ExtResource("2_fu85b")
+text = "Retour"
+
+[connection signal="pressed" from="Retour" to="." method="_on_retour_pressed"]

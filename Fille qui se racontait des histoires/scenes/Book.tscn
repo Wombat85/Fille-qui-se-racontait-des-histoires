@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://h73dit8cqy22"]
+
+[ext_resource type="Script" path="res://scripts/Book.gd" id="2"]
+[ext_resource type="Shader" path="res://scripts/pageflip.gdshader" id="4"]
+[ext_resource type="Texture2D" uid="uid://uefqorj6vhhx" path="res://art/alpha.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://bamnpjyjgkda6" path="res://audios/premierepage.mp3" id="6_vvpw8"]
+[ext_resource type="AudioStream" uid="uid://cwgt2g5c5jc16" path="res://audios/deuxiemepage.mp3" id="8_ms4mw"]
+[ext_resource type="Texture2D" uid="uid://cvvvgh7hrpmut" path="res://art/slider.png" id="10"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("4")
+shader_parameter/time = 0.7
+shader_parameter/flip_left = true
+shader_parameter/flip_duration = 1.0
+shader_parameter/cylinder_ratio = 0.2
+shader_parameter/cylinder_direction = Vector2(5, 1)
+shader_parameter/rect = Vector2(700, 870)
+
+[node name="Book" type="NinePatchRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -527.317
+offset_top = -324.0
+offset_right = 339.683
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+script = ExtResource("2")
+border_width = 0
+
+[node name="Clipper" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 0
+offset_right = 867.0
+offset_bottom = 630.0
+
+[node name="Page" type="TextureRect" parent="Clipper"]
+material = SubResource("1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00173, 1)
+mouse_filter = 2
+texture = ExtResource("5")
+
+[node name="Slider" type="TextureRect" parent="Clipper"]
+layout_mode = 0
+anchor_bottom = 1.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+texture = ExtResource("10")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="Clipper/Slider"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 32.0
+offset_bottom = 102.0
+mouse_filter = 2
+
+[node name="Left" type="Control" parent="Clipper"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -425.983
+offset_top = 1.43967
+offset_right = -425.983
+offset_bottom = -7.56033
+grow_vertical = 2
+
+[node name="Right" type="Control" parent="Clipper"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -37.683
+offset_top = -0.347992
+offset_right = -37.683
+offset_bottom = -0.348022
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Texte1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_vvpw8")
+
+[node name="Texte2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_ms4mw")
+
+[connection signal="finished" from="Texte2" to="." method="_on_texte_2_finished"]

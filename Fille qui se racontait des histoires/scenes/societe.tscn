@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi4k1vij6g23k"]
+
+[ext_resource type="Script" path="res://scripts/societe.gd" id="1_i20eo"]
+[ext_resource type="Texture2D" uid="uid://5kysyhy2drqj" path="res://art/porte_ouverte.jpg" id="2_e5sh3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d0ll"]
+size = Vector2(339, 79)
+
+[node name="societe" type="Node2D"]
+script = ExtResource("1_i20eo")
+
+[node name="porteouverte" type="Sprite2D" parent="."]
+position = Vector2(574, 322)
+texture = ExtResource("2_e5sh3")
+
+[node name="jeuxsoc" type="Area2D" parent="porteouverte"]
+
+[node name="jeuxsocshape" type="CollisionShape2D" parent="porteouverte/jeuxsoc"]
+position = Vector2(-34.5, -52.5)
+shape = SubResource("RectangleShape2D_7d0ll")
+
+[connection signal="input_event" from="porteouverte/jeuxsoc" to="." method="_on_jeuxsoc_input_event"]
+[connection signal="mouse_entered" from="porteouverte/jeuxsoc" to="." method="_on_jeuxsoc_mouse_entered"]
+[connection signal="mouse_exited" from="porteouverte/jeuxsoc" to="." method="_on_jeuxsoc_mouse_exited"]

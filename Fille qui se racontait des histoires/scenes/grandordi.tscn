@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dllr8cxrb5hvn"]
+
+[ext_resource type="Texture2D" uid="uid://d2xpvcyxehseh" path="res://art/grandordi.jpg" id="1_2ic72"]
+[ext_resource type="Script" path="res://scripts/grandordi.gd" id="1_qwynl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f5w8"]
+size = Vector2(72, 46)
+
+[node name="grand_ordi" type="Node2D"]
+script = ExtResource("1_qwynl")
+
+[node name="Grandordi" type="Sprite2D" parent="."]
+position = Vector2(576, 327)
+texture = ExtResource("1_2ic72")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(453, 416)
+shape = SubResource("RectangleShape2D_2f5w8")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

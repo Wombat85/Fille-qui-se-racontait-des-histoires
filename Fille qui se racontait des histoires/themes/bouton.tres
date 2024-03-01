@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://caa1cfafpetid"]
+
+[ext_resource type="StyleBox" uid="uid://cj4mdu4k5kexs" path="res://themes/bouton_hover.tres" id="1_wjuil"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi3d5"]
+bg_color = Color(0.866667, 0.101961, 0.0392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[resource]
+Button/styles/hover = ExtResource("1_wjuil")
+Button/styles/normal = SubResource("StyleBoxFlat_mi3d5")

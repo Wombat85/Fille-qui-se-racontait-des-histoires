@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dykgtm3627fjm"]
+
+[ext_resource type="Script" path="res://scripts/indices.gd" id="1_wrin4"]
+
+[node name="indices" type="Node2D"]
+script = ExtResource("1_wrin4")

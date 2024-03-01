@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf21kpp41evnm"]
+
+[ext_resource type="Texture2D" uid="uid://dxv4a6qwbjnof" path="res://art/lecture2.jpg" id="1_77m46"]
+[ext_resource type="Script" path="res://scripts/livres.gd" id="1_nd3qc"]
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_myoi4"]
+
+[node name="livres" type="Node2D"]
+script = ExtResource("1_nd3qc")
+
+[node name="Lecture2" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+texture = ExtResource("1_77m46")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("3_myoi4")]
+position = Vector2(37, -11)

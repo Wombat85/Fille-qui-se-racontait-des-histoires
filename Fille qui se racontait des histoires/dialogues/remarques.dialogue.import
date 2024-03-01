@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dr4fjrlqhwrxk"
+path="res://.godot/imported/remarques.dialogue-4b20a654e786975cef182ee32ffe7cd9.tres"
+
+[deps]
+
+source_file="res://dialogues/remarques.dialogue"
+dest_files=["res://.godot/imported/remarques.dialogue-4b20a654e786975cef182ee32ffe7cd9.tres"]
+
+[params]
+
+defaults=true

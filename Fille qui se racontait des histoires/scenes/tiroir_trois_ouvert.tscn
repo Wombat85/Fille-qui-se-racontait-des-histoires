@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://7obrwqctb25k"]
+
+[ext_resource type="Script" path="res://scripts/tiroir_trois_ouvert.gd" id="1_cv46i"]
+[ext_resource type="Texture2D" uid="uid://cysvxd65ssuyw" path="res://art/dossier.jpg" id="2_vdwi2"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="3_dln0p"]
+
+[node name="tiroir_trois_ouvert" type="Node2D"]
+script = ExtResource("1_cv46i")
+
+[node name="tiroirtrois" type="Sprite2D" parent="."]
+position = Vector2(578, 323)
+texture = ExtResource("2_vdwi2")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("3_dln0p")]
+position = Vector2(31, -21)

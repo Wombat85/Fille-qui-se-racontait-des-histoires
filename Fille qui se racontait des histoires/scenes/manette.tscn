@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxr78rvimplhd"]
+
+[ext_resource type="Script" path="res://scripts/manette.gd" id="1_mre75"]
+[ext_resource type="Texture2D" uid="uid://csys8j7l3x6h3" path="res://art/manette.jpg" id="2_aqy6k"]
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_kab75"]
+
+[node name="manette" type="Node2D"]
+script = ExtResource("1_mre75")
+
+[node name="manette" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+texture = ExtResource("2_aqy6k")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("3_kab75")]
+position = Vector2(28, -18)

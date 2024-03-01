@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://1cpq7iob24kn"]
+
+[ext_resource type="Script" path="res://scripts/jeuxsociete.gd" id="1_stebp"]
+[ext_resource type="Texture2D" uid="uid://2sp52j4hnbil" path="res://art/jeuxsociete.JPG" id="2_tqk2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vj1k"]
+size = Vector2(626, 415)
+
+[node name="jeuxsociete" type="Node2D"]
+script = ExtResource("1_stebp")
+
+[node name="jeuxsocieteatelier" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_tqk2h")
+
+[node name="atelierjeux" type="Area2D" parent="jeuxsocieteatelier"]
+
+[node name="collisionatelier" type="CollisionShape2D" parent="jeuxsocieteatelier/atelierjeux"]
+position = Vector2(7, 18.5)
+shape = SubResource("RectangleShape2D_3vj1k")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[connection signal="input_event" from="jeuxsocieteatelier/atelierjeux" to="." method="_on_atelierjeux_input_event"]
+[connection signal="mouse_entered" from="jeuxsocieteatelier/atelierjeux" to="." method="_on_atelierjeux_mouse_entered"]
+[connection signal="mouse_exited" from="jeuxsocieteatelier/atelierjeux" to="." method="_on_atelierjeux_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

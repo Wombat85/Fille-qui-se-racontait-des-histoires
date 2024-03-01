@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b56of1rqn147r"]
+
+[ext_resource type="VideoStream" path="res://art/animation.ogv" id="2_7qh43"]
+[ext_resource type="Script" path="res://scripts/VideoStreamPlayer.gd" id="3_1nrsl"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="4_07b24"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="4_o1jtq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hw1vt"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="video_anniv" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+z_index = 1
+offset_left = 41.0
+offset_top = 45.0
+offset_right = 1961.0
+offset_bottom = 1133.0
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("2_7qh43")
+autoplay = true
+buffering_msec = 1000
+script = ExtResource("3_1nrsl")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -72.0
+offset_right = -30.0
+offset_bottom = 40.0
+scale = Vector2(30.278, 16.282)
+theme_override_styles/panel = SubResource("StyleBoxFlat_hw1vt")
+
+[node name="Pause" type="Button" parent="."]
+unique_name_in_owner = true
+z_index = 2
+offset_left = 1021.0
+offset_top = 574.0
+offset_right = 1136.0
+offset_bottom = 622.0
+theme = ExtResource("4_07b24")
+text = "Pause"
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("4_o1jtq")]
+position = Vector2(180, -11)
+
+[connection signal="button_down" from="Pause" to="VideoStreamPlayer" method="_on_pause_button_down"]

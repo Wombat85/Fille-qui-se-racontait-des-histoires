@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://44ucmpmnfvhv"]
+
+[ext_resource type="Script" path="res://scripts/poubelle.gd" id="1_kxvpo"]
+[ext_resource type="Texture2D" uid="uid://cgnsmt2qu5tcd" path="res://art/poubelle.jpg" id="1_ocmp8"]
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_aonwg"]
+
+[node name="poubelle" type="Node2D"]
+script = ExtResource("1_kxvpo")
+
+[node name="Poubelle" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+texture = ExtResource("1_ocmp8")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("3_aonwg")]
+position = Vector2(21, -1)
