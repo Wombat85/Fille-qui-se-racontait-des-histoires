@@ -1,74 +1,88 @@
 ~ starttrousses
 
-On ne manque pas de stylos ici...
+On ne manque pas de stylos ici... [ID:t932c377a3e]
 => END
 
 ~ startenv
 
-Joli stock d'enveloppes.
+Joli stock d'enveloppes. [ID:tee4788cf9e]
 
 => END
 
 ~ startcroch
 
-Y en a du bazar, là-dedans !
+Y en a du bazar, là-dedans ! [ID:ta9a1cbbfaa]
 
 => END
 
 ~ startmanette
 
-C'est pas le moment de jouer, j'ai un rapport à faire, moi !
+C'est pas le moment de jouer, j'ai un rapport à faire, moi ! [ID:tcd06d7b52b]
 => END
 
 ~ startphotos
 
-Tiens, une photo qui bouge ?
+Je vais prendre un peu de temps pour regarder de plus près. [ID:t5636b0345a]
 
 => END
 
 ~ startjeux
 
-J'ai vu aussi des jeux de société dans le salon.
+J'ai vu aussi des jeux de société dans le salon. [ID:tec2596ee39]
 
 
 => END
 
 ~ startBU
 
-Elle range ses bouquins par ordre alphabétique d'auteur...
-En même temps, elle travaille dans une BU visiblement.
+Elle range ses bouquins par ordre alphabétique d'auteur... En même temps, elle travaille dans une BU visiblement. [ID:t7650dddd65]
 
 => END
 
 ~ starttheatre
 
-Projets amateurs et semi-pro, elle a foulé les planches plus d'une fois.
+Projets amateurs et semi-pro, elle a foulé les planches plus d'une fois. [ID:t8901ef483e]
 
 => END
 
 ~ startlivres
 
-Mouais... Il n'y a même pas Critical Play...
-Ben quoi, à force, je finis par m'y connaître !
+Mouais... Il n'y a même pas [i]Critical Play[/i]... Ben quoi, à force de faire ce genre d'enquêtes, je finis par m'y connaître ! [ID:t29510822ac]
 
 
 => END
 
 ~ startpoubelle
 
-Coca-chocolat, c'est pas gagné les bonnes résolutions !
+Coca-chocolat, c'est pas gagné les bonnes résolutions ! [ID:tac735d0118]
 
 
 => END
 
 ~ starttableau
 
-Trois gamins ! Elle peut pédaler pour compenser l'empreinte carbone...
+Trois gamins ! Elle doit avoir un sacré sens de l'organisation... [ID:t19216e5246]
 
 
 => END
 
 ~ startmeta
 
-C'est meta...
+C'est meta... [ID:t53e543e2ef]
+=> END!
+
+~ startedition
+
+Elle a coordonné des ouvrages illustrés, définition du projet, recrutement des auteurs, choix de l'iconographie, [ID:tcb8bba37f1] 
+travail avec les graphistes, correction, mise en page, réécriture... [ID:taf62f1b670]
+Elle a travaillé en édition scolaire, et globalement dans la vulgarisation de savoirs. [ID:t41a212d06f]
+=> END!
+
+~ startordi
+
+BGA, Steam, logique... [ID:ta75e854fb2] 
+=> END!
+
+~ startpiano
+"On est pas pieds nus... pour aller dans la rue" [ID:te322c17d8a]
 => END!

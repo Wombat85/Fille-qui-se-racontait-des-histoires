@@ -1,49 +1,48 @@
 ~ start1
-[speed=0.2]   La fille écrit des trucs, un roman, des nouvelles.
+[speed=0.2]   La fille écrit des trucs, un roman, des nouvelles. [ID:t0481bd417d] 
 
 => END
 
 ~ start2
-[speed=0.2]   Elle a fait pas mal de théâtre, un autre moyen de se raconter des histoires.
+[speed=0.2]   Elle a fait pas mal de théâtre, un autre moyen de se raconter des histoires. [ID:ta0e045d639] 
 
 => END!
 
 ~ start3
-[speed=0.2]   Elle a travaillé comme éditrice, sur divers bouquins.
+[speed=0.2]   Elle a travaillé comme éditrice, sur divers bouquins. [ID:t50a2a5c3e1] 
 
 => END!
 
 ~ start4
-[speed=0.2]   Elle a visiblement la fibre animatrice, grands jeux...    et 0 sens du ridicule.
+[speed=0.2]   Elle a visiblement la fibre animatrice, grands jeux...    et 0 sens du ridicule. [ID:t9503035bd4] 
 
 => END!
 
 ~ start5
-[speed=0.2]   Elle aime les jeux de société et a testé la création d'un jeu lors d'un atelier conception.
+[speed=0.2]   Elle aime les jeux de société et a testé la création d'un jeu lors d'un atelier conception. [ID:t0956718282] 
 
 => END!
 
 ~ start6
-[speed=0.2]   Elle a participé à la création de petits jeux vidéo.
-
+[speed=0.2]   Elle a participé à la création de jeux vidéo. [ID:tf71ee89535] 
 => END!
 
 ~ start7
-[speed=0.2]   Elle a fait de la BU où elle travaille un terrain de jeux pour collègues et étudiants.
+[speed=0.2]   Elle a fait de la BU où elle travaille un terrain de jeux pour collègues et étudiants. [ID:t244d296ec6] 
 
 => END!
 
 ~ start8
-[speed=0.2]   Elle confectionne de petites choses en crochet.              Kitsch mais mignon.
+[speed=0.2]   Elle confectionne de petites choses en crochet.[speed=0.8]              [speed=0.2]Kitsch mais mignon. [ID:tfe3fa8b9b6] 
 
 => END!
 
 ~ start9
-[speed=0.2]   Elle a prouvé ses compétences en gestion de projet.
+[speed=0.2]   Elle a prouvé ses compétences en gestion de projet. [ID:t2b26f8726a] 
 
 => END!
 
 ~ start10
-[speed=0.2]   La fille écrit des trucs, un roman, des nouvelles.
+[speed=0.2]   Elle a mené des opérations de communication. [ID:t504dcb9bb7] 
 
 => END
