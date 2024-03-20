@@ -10,7 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 	
-func _on_tiroirmanus_input_event(viewport, event, shape_idx):
+func _on_tiroirmanus_input_event(_viewport, _event, _shape_idx):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		OS.shell_open("https://drive.google.com/file/d/14_qGM6ecnd0lEULNN9mO7L8Tv5deHpuj/view?usp=sharing")
 

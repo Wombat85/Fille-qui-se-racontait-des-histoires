@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bikf0tb0i2n5b"]
+
+[ext_resource type="Texture2D" uid="uid://c746n2rw4yhwd" path="res://art/edition_deux.jpg" id="1_5wm4l"]
+[ext_resource type="Script" path="res://scripts/edition_deux.gd" id="1_g7p80"]
+[ext_resource type="Texture2D" uid="uid://3nvli1aydyjl" path="res://art/edition_trois.jpg" id="2_25h8c"]
+[ext_resource type="Texture2D" uid="uid://c2db41b17hr10" path="res://art/edition_cinq.jpg" id="4_crg4g"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="5_70ra5"]
+[ext_resource type="AudioStream" uid="uid://c521v0hp6rfh8" path="res://audios/tcb8bba37f1.mp3" id="6_ppkxt"]
+
+[node name="edition_deux" type="Node2D"]
+script = ExtResource("1_g7p80")
+
+[node name="Livresedition" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+texture = ExtResource("1_5wm4l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." groups=["canvas"]]
+unique_name_in_owner = true
+
+[node name="edition_trois" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(572, 327)
+texture = ExtResource("2_25h8c")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." groups=["canvas"]]
+unique_name_in_owner = true
+
+[node name="edition_quatre" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(580, 323)
+texture = ExtResource("4_crg4g")
+
+[node name="bouton_retour_carnet" parent="CanvasLayer2/edition_quatre" instance=ExtResource("5_70ra5")]
+position = Vector2(-395, 178)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_ppkxt")
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

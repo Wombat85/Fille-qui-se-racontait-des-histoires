@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://blq8tdthysi2k"]
+[gd_scene load_steps=56 format=3 uid="uid://blq8tdthysi2k"]
 
 [ext_resource type="Texture2D" uid="uid://b6o2pskccd3ai" path="res://art/bureau1.jpg" id="2_ie2f8"]
 [ext_resource type="PackedScene" uid="uid://coa4keram5y7q" path="res://scenes/interaction_area.tscn" id="3_1nhb2"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://dkq6govm5xkhi" path="res://art/porte_1.jpg" id="37_5s62r"]
 [ext_resource type="AudioStream" uid="uid://cw8fs5xlwlwg4" path="res://audios/DRWRWood_Tiroir en bois ouverture (ID 1499)_LS.wav" id="37_08loa"]
 [ext_resource type="Texture2D" uid="uid://bad0wj8x6voyd" path="res://art/porte_2.jpg" id="38_7jte7"]
+[ext_resource type="AudioStream" uid="uid://6y10ix68qu3u" path="res://audios/MACHOffi_Imprimante jet d encre (ID 0169)_LS.wav" id="39_shvll"]
 [ext_resource type="AudioStream" uid="uid://dl8u8mqououwi" path="res://audios/DOORCreak_Grincement de porte (ID 0302)_LS.wav" id="40_fcvwr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_giwfc"]
@@ -55,6 +56,9 @@ size = Vector2(59, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crwtm"]
 size = Vector2(71, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n871r"]
+size = Vector2(122, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm33c"]
 size = Vector2(120, 113)
@@ -288,6 +292,10 @@ unique_name_in_owner = true
 position = Vector2(-305.5, -78)
 shape = SubResource("RectangleShape2D_crwtm")
 
+[node name="collisionfeuille" type="CollisionShape2D" parent="Bureau/InteractionArea"]
+position = Vector2(-35, -195)
+shape = SubResource("RectangleShape2D_n871r")
+
 [node name="InteractionArea2" parent="Bureau" instance=ExtResource("4_5b31n")]
 
 [node name="collisionanimation" type="CollisionShape2D" parent="Bureau/InteractionArea2"]
@@ -341,6 +349,10 @@ unique_name_in_owner = true
 
 [node name="Timer5" type="Timer" parent="."]
 unique_name_in_owner = true
+
+[node name="bruit_imprimante" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("39_shvll")
 
 [node name="bruit_tiroir" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true

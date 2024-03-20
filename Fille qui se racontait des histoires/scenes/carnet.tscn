@@ -146,62 +146,56 @@ unique_name_in_owner = true
 z_index = 4
 offset_left = -185.0
 offset_top = -121.0
-offset_right = 882.0
-offset_bottom = -40.0
+offset_right = 180.0
+offset_bottom = -51.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 28
-text = "   La fille écrit des trucs,                                                                un roman, des nouvelles."
-metadata/_edit_use_anchors_ = true
+text = "   La fille écrit des trucs, un roman, des nouvelles."
 
 [node name="theatre" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
 z_index = 4
 offset_left = -185.0
 offset_top = -40.0
-offset_right = 882.0
+offset_right = 190.0
 offset_bottom = 41.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 28
-text = "   Elle a fait pas mal de                                                             théâtre, un autre moyen de   
-se raconter des histoires."
-metadata/_edit_use_anchors_ = true
+text = "   Elle a fait pas mal de théâtre, un autre moyen de se raconter des histoires."
 
 [node name="éditrice" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
 z_index = 4
 offset_left = -192.0
 offset_top = 50.0
-offset_right = 875.0
+offset_right = 188.0
 offset_bottom = 131.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 28
-text = "   Elle a travaillé comme                                                                    éditrice, sur divers bouquins."
-metadata/_edit_use_anchors_ = true
+text = "   Elle a travaillé comme éditrice, sur divers bouquins."
 
 [node name="colo" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
-z_index = 13
+z_index = 4
 offset_left = -205.0
 offset_top = 138.0
-offset_right = 863.0
-offset_bottom = 238.0
+offset_right = 175.0
+offset_bottom = 223.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 28
-text = "   Elle a visiblement la fibre                                                      animatrice, grands jeux... 
-et 0 sens du ridicule."
-metadata/_edit_use_anchors_ = true
+text = "   Elle a visiblement la fibre animatrice, grands jeux...    et 0 sens du ridicule."
 
 [node name="societe" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
-z_index = 13
+z_index = 4
 offset_left = -203.0
 offset_top = 224.0
 offset_right = 187.0
@@ -213,67 +207,77 @@ theme_override_font_sizes/normal_font_size = 27
 text = "   Elle aime les jeux de société et a testé la création d'un jeu lors d'un atelier conception."
 fit_content = true
 tab_size = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="jeuxvideo" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
-z_index = 13
+z_index = 4
 offset_left = 212.0
 offset_top = -124.0
-offset_right = 1280.0
-offset_bottom = -34.0
+offset_right = 572.0
+offset_bottom = -54.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 27
-text = "    Elle a participé à la                                                                      création de petits jeux vidéo."
+text = "    Elle a participé à la  création de jeux vidéo."
 tab_size = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="gestion" type="RichTextLabel" parent="." groups=["images"]]
-unique_name_in_owner = true
-z_index = 13
-offset_left = 212.0
-offset_top = 138.0
-offset_right = 1280.0
-offset_bottom = 228.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = -11
-theme_override_fonts/normal_font = ExtResource("2_3fgbr")
-theme_override_font_sizes/normal_font_size = 27
-text = "    Elle a prouvé ses                                                                          compétences en gestion                                                                            de projet."
-tab_size = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="BU" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
-z_index = 13
+z_index = 4
 offset_left = 212.0
 offset_top = -39.0
-offset_right = 1280.0
+offset_right = 612.0
 offset_bottom = 51.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 27
-text = "    Elle a fait de la BU où elle                                                                     travaille un terrain de jeux                                                                     pour collègues et étudiants."
+text = "    Elle a fait de la BU où elle  travaille un terrain de jeux  pour collègues et étudiants."
 tab_size = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="crochet" type="RichTextLabel" parent="." groups=["images"]]
 unique_name_in_owner = true
-z_index = 13
+z_index = 4
 offset_left = 210.0
 offset_top = 47.0
-offset_right = 1278.0
+offset_right = 600.0
 offset_bottom = 137.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_3fgbr")
 theme_override_font_sizes/normal_font_size = 27
-text = "    Elle confectionne de petites                                                                   choses en crochet.                                                                                Kitsch mais mignon.         "
+text = "    Elle confectionne de petites choses en crochet.              Kitsch mais mignon.         "
+scroll_active = false
 tab_size = 2
-metadata/_edit_use_anchors_ = true
+
+[node name="gestion" type="RichTextLabel" parent="." groups=["images"]]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 212.0
+offset_top = 138.0
+offset_right = 592.0
+offset_bottom = 228.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("2_3fgbr")
+theme_override_font_sizes/normal_font_size = 27
+text = "    Elle a prouvé ses compétences en gestion  
+de projet."
+tab_size = 2
+
+[node name="communication" type="RichTextLabel" parent="." groups=["images"]]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 196.0
+offset_top = 226.0
+offset_right = 572.0
+offset_bottom = 291.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("2_3fgbr")
+theme_override_font_sizes/normal_font_size = 27
+text = "      Elle a mené des opérations de communication."
 
 [node name="carnet" type="Sprite2D" parent="."]
 position = Vector2(171, 58)
@@ -281,4 +285,14 @@ scale = Vector2(1.4275, 1.21887)
 texture = ExtResource("4_1gpgv")
 
 [node name="Bouton retour bureau" parent="." instance=ExtResource("4_c8n6j")]
-position = Vector2(-222, -291)
+unique_name_in_owner = true
+z_index = 4
+position = Vector2(-1043, -268)
+scale = Vector2(0.8, 0.8)
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 9.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

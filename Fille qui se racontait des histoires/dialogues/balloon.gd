@@ -6,12 +6,12 @@ const NEXT_ACTION = &"ui_accept"
 ## The action to use to skip typing the dialogue
 const SKIP_ACTION = &"ui_cancel"
 
-
+@onready var audio_stream_player = %AudioStreamPlayer2D
 @onready var balloon: Panel = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-
+#@onready var _is_paused: bool = false
 ## The dialogue resource
 var resource: DialogueResource
 
@@ -24,6 +24,8 @@ var is_waiting_for_input: bool = false
 ## See if we are running a long mutation and should hide the balloon
 var will_hide_balloon: bool = false
 
+var _is_paused: bool = false
+
 ## The current line
 var dialogue_line: DialogueLine:
 	set(next_dialogue_line):
@@ -34,6 +36,7 @@ var dialogue_line: DialogueLine:
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
 			queue_free()
+			get_tree().paused = !_is_paused
 			return
 
 		# If the node isn't ready yet then none of the labels will be ready yet either
@@ -54,10 +57,14 @@ var dialogue_line: DialogueLine:
 		# Show our balloon
 		balloon.show()
 		will_hide_balloon = false
+		get_tree().paused = _is_paused
 
 		dialogue_label.show()
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()
+			var stream = load("res://audios/%s.mp3" % dialogue_line.translation_key)
+			audio_stream_player.stream = stream
+			audio_stream_player.play()
 			await dialogue_label.finished_typing
 
 		# Wait for input

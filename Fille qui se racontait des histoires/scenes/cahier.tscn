@@ -1,0 +1,275 @@
+[gd_scene load_steps=15 format=3 uid="uid://42sfnr54ea61"]
+
+[ext_resource type="Script" path="res://scripts/cahier.gd" id="1_ttjek"]
+[ext_resource type="Texture2D" uid="uid://c120t7pi00sln" path="res://art/cahier.jpg" id="1_xr4yc"]
+[ext_resource type="Texture2D" uid="uid://b5r32c633guh7" path="res://art/carte_mentale.png" id="3_ljgvi"]
+[ext_resource type="PackedScene" uid="uid://cstpusrc8pqrr" path="res://scenes/bouton_retour_carnet.tscn" id="4_nhpul"]
+[ext_resource type="FontFile" uid="uid://bp4oin52tnfb2" path="res://polices/Borel-Regular.ttf" id="5_4q0qh"]
+[ext_resource type="Texture2D" uid="uid://34rucojnuroq" path="res://art/Milletapes-01.jpg" id="6_glar3"]
+[ext_resource type="Texture2D" uid="uid://be4vssmd48goh" path="res://art/Couverture templiers2.jpg" id="7_m2dq8"]
+[ext_resource type="Texture2D" uid="uid://kmud666su4ps" path="res://art/Couverture romains3.jpg" id="8_oebxi"]
+[ext_resource type="Texture2D" uid="uid://d3rcrgs5wss13" path="res://art/planno.png" id="9_sostc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4at2i"]
+size = Vector2(99, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqbdt"]
+size = Vector2(79, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iyhj"]
+size = Vector2(125, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtp8s"]
+size = Vector2(124, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r7h5"]
+size = Vector2(124, 54)
+
+[node name="cahier" type="Node2D"]
+script = ExtResource("1_ttjek")
+
+[node name="cahier" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+texture = ExtResource("1_xr4yc")
+
+[node name="Cartementale" type="Sprite2D" parent="."]
+position = Vector2(386, 506)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("3_ljgvi")
+
+[node name="bouton_retour_carnet" parent="." instance=ExtResource("4_nhpul")]
+position = Vector2(38, -19)
+
+[node name="textemilletapes" type="RichTextLabel" parent="." groups=["milletapes"]]
+visible = false
+offset_left = 637.0
+offset_top = 315.0
+offset_right = 899.0
+offset_bottom = 538.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "- Participation à la [color=#dc6ae4]définition du projet[/color] :
+réflexion sur l'ergonomie de l'interface,
+rédaction d'une charte éditoriale
+
+- [color=#dc6ae4]Recrutement et encadrement[/color] de l'équipe d'auteurs
+
+- Relations avec les développeurs, participation aux [color=#dc6ae4]tests d'utilisation[/color]
+ "
+
+[node name="titremilletapes" type="RichTextLabel" parent="." groups=["milletapes"]]
+visible = false
+offset_left = 644.0
+offset_top = 122.0
+offset_right = 890.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0.862745, 0.415686, 0.894118, 1)
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+text = "Millétapes, portail touristique"
+
+[node name="Milletapes" type="Sprite2D" parent="." groups=["milletapes"]]
+visible = false
+position = Vector2(761, 231)
+scale = Vector2(0.418571, 0.418571)
+texture = ExtResource("6_glar3")
+
+[node name="titrehistoire" type="RichTextLabel" parent="." groups=["histoires"]]
+visible = false
+offset_left = 633.0
+offset_top = 117.0
+offset_right = 904.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0.862745, 0.415686, 0.894118, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+text = "            En quête d'histoire : 
+collection de livres pour enfants"
+
+[node name="textehistoire" type="RichTextLabel" parent="." groups=["histoires"]]
+visible = false
+offset_left = 625.0
+offset_top = 370.0
+offset_right = 929.0
+offset_bottom = 579.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Projet de mémoire professionnel de master Politiques éditoriales : création d’une collection mêlant [color=#dc6ae4]fiction policière et documentaire[/color]
+
+Définition du concept, recherche d'[color=#dc6ae4]auteurs[/color] et d'[color=#dc6ae4]illustrateurs[/color] potentiels, étude de concurrence, prototypage (maquette, choix techniques), établissement d'un [color=#dc6ae4]compte d'exploitation prévisionnel[/color], réflexions sur la [color=#dc6ae4]diffusion[/color], 
+la [color=#dc6ae4]distribution [/color]et le marketing"
+
+[node name="texteplanning" type="RichTextLabel" parent="." groups=["plannings"]]
+visible = false
+offset_left = 620.0
+offset_top = 288.0
+offset_right = 906.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "- [color=#8c52ff]Animation d'un groupe de travail [/color]pour l'amélioration de l'élaboration des plannings
+(définition des besoins, étude de marché)
+
+- [color=#8c52ff]Test et paramétrage de l'outil [/color]en lien avec 
+le service informatique du service commun 
+de la documentation interuniversitaire
+
+- [color=#8c52ff]Formation des équipes [/color]et accompagnement au changement
+
+- Modification de la charte graphique 
+pour l'[color=#8c52ff]accessibilité[/color] de l'outil à un collègue déficient visuel"
+
+[node name="textehandicap" type="RichTextLabel" parent="." groups=["handicaps"]]
+offset_left = 620.0
+offset_top = 172.0
+offset_right = 912.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "- Développement de[color=#8c52ff] services dédiés[/color] à ces usagers : statut de prêt particulier, colis documentaires, rendez-vous personnalisés...
+
+- Amélioration de la [color=#8c52ff]communication[/color] envers 
+ces publics (plaquettes, tutoriels, mails...), 
+en lien avec la mission Handicap de l'université et le service Handi-études
+
+- Animation de [color=#8c52ff]focus groupes[/color] composés d'étudiants en situation de handicap
+
+- Achat de [color=#8c52ff]matériel spécialisé [/color](machine à lire, téléagrandisseur, scanner portable)
+
+- Obtention de l'inscription et de l'agrément [color=#8c52ff]exception droit d'auteur[/color], permettant d'accéder aux fichiers source des éditeurs de documents imprimés pour en réaliser des adaptations dédiées aux étudiants empêchés de lire"
+
+[node name="textequalite" type="RichTextLabel" parent="." groups=["qualites"]]
+visible = false
+offset_left = 615.0
+offset_top = 184.0
+offset_right = 923.0
+offset_bottom = 573.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "- Copilotage du [color=#8c52ff]groupe de travail \"Accueil\" [/color]
+du service commun de la documentation de l'UPV
+
+- Organisation de [color=#8c52ff]formations [/color](anglais pour l'accueil, gestion des situations difficiles...) 
+pour l'ensemble des agents des BU
+
+- Animation de [color=#8c52ff]groupes d'échanges de pratiques[/color]
+
+- [color=#8c52ff]Formalisation et harmonisation[/color] des pratiques d'accueil : rédaction de procédures, réorganisation de la documentation liée  aux activités d'accueil
+
+- Rationalisation des [color=#8c52ff]opérations internes[/color] relatives à l'accueil et aux services : mise en place 
+de circuits de suivi et de référents, utilisation 
+du module d'informatique décisionnelle 
+
+- Réalisation d[color=#8c52ff]'enquêtes de publics[/color]"
+
+[node name="milletapes" type="Area2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="collisionmilletapes" type="CollisionShape2D" parent="milletapes"]
+position = Vector2(270.5, 331)
+shape = SubResource("RectangleShape2D_4at2i")
+
+[node name="quetedhistoire" type="Area2D" parent="."]
+position = Vector2(-32, -19)
+
+[node name="collisionquete" type="CollisionShape2D" parent="quetedhistoire"]
+z_index = 1
+position = Vector2(373.5, 316.5)
+shape = SubResource("RectangleShape2D_bqbdt")
+
+[node name="CouvertureTempliers2" type="Sprite2D" parent="." groups=["histoires"]]
+visible = false
+position = Vector2(691, 267)
+scale = Vector2(0.404192, 0.404192)
+texture = ExtResource("7_m2dq8")
+
+[node name="CouvertureRomains3" type="Sprite2D" parent="." groups=["histoires"]]
+visible = false
+position = Vector2(841, 267)
+scale = Vector2(0.403614, 0.403614)
+texture = ExtResource("8_oebxi")
+
+[node name="titreplanning" type="RichTextLabel" parent="." groups=["plannings"]]
+visible = false
+offset_left = 633.0
+offset_top = 117.0
+offset_right = 904.0
+offset_bottom = 229.0
+theme_override_colors/default_color = Color(0.54902, 0.321569, 1, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+text = "         Planning Biblio
+"
+
+[node name="titrehandicap" type="RichTextLabel" parent="." groups=["handicaps"]]
+offset_left = 619.0
+offset_top = 117.0
+offset_right = 953.0
+offset_bottom = 229.0
+theme_override_colors/default_color = Color(0.54902, 0.321569, 1, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+text = "  Mise en place de services pour les        publics en situation de handicap
+"
+
+[node name="titrequalite" type="RichTextLabel" parent="." groups=["qualites"]]
+visible = false
+offset_left = 633.0
+offset_top = 117.0
+offset_right = 904.0
+offset_bottom = 229.0
+theme_override_colors/default_color = Color(0.54902, 0.321569, 1, 1)
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("5_4q0qh")
+text = "      Amélioration de la qualité 
+de l'accueil dans les BU de l'UPV"
+
+[node name="planningbiblio" type="Area2D" parent="."]
+
+[node name="collisionplanning" type="CollisionShape2D" parent="planningbiblio"]
+position = Vector2(316, 413)
+shape = SubResource("RectangleShape2D_8iyhj")
+
+[node name="qualite" type="Area2D" parent="."]
+position = Vector2(480, 393)
+
+[node name="collisionqualite" type="CollisionShape2D" parent="qualite"]
+position = Vector2(-86, 128)
+shape = SubResource("RectangleShape2D_mtp8s")
+
+[node name="handicaps" type="Area2D" parent="."]
+
+[node name="collisionhandicaps" type="CollisionShape2D" parent="handicaps"]
+position = Vector2(471, 393)
+shape = SubResource("RectangleShape2D_8r7h5")
+
+[node name="Planno" type="Sprite2D" parent="." groups=["plannings"]]
+visible = false
+position = Vector2(759, 208)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_sostc")
+
+[connection signal="mouse_entered" from="milletapes" to="." method="_on_milletapes_mouse_entered"]
+[connection signal="mouse_exited" from="milletapes" to="." method="_on_milletapes_mouse_exited"]
+[connection signal="mouse_entered" from="quetedhistoire" to="." method="_on_quetedhistoire_mouse_entered"]
+[connection signal="mouse_exited" from="quetedhistoire" to="." method="_on_quetedhistoire_mouse_exited"]
+[connection signal="mouse_entered" from="planningbiblio" to="." method="_on_planningbiblio_mouse_entered"]
+[connection signal="mouse_exited" from="planningbiblio" to="." method="_on_planningbiblio_mouse_exited"]
+[connection signal="mouse_entered" from="qualite" to="." method="_on_qualite_mouse_entered"]
+[connection signal="mouse_exited" from="qualite" to="." method="_on_qualite_mouse_exited"]
+[connection signal="mouse_entered" from="handicaps" to="." method="_on_handicaps_mouse_entered"]
+[connection signal="mouse_exited" from="handicaps" to="." method="_on_handicaps_mouse_exited"]

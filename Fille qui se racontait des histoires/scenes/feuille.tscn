@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://8u4b7oj7w8ws"]
+
+[ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="1_auodp"]
+[ext_resource type="Script" path="res://scripts/feuille.gd" id="1_vi47h"]
+[ext_resource type="Texture2D" uid="uid://b61eqodtrqbst" path="res://art/Partition.jpg" id="2_j7h5e"]
+
+[node name="feuille" type="Node2D"]
+script = ExtResource("1_vi47h")
+
+[node name="Bouton retour bureau" parent="." instance=ExtResource("1_auodp")]
+z_index = 1
+position = Vector2(-647, 3)
+
+[node name="Partition" type="Sprite2D" parent="."]
+position = Vector2(579, 327)
+texture = ExtResource("2_j7h5e")

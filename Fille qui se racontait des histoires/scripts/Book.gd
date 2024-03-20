@@ -119,10 +119,10 @@ func _on_input(event : InputEvent, left : bool) -> void:
 	if (left and n == 0) or (not left and n == max_page):
 		return
 	if event is InputEventMouseButton and event.is_pressed():
-		if left:
-			_on_prev()
-		else:
-			_on_next()
+#		if left:
+#			_on_prev()
+#		else:
+		_on_next()
 
 func _on_prev() -> void:
 #	Sound.page_flip()
@@ -145,9 +145,9 @@ func _on_book_input(event : InputEvent) -> void:
 	var scaled := false
 	if dragging and (event is InputEventMouseMotion or event is InputEventScreenDrag):
 		
-		if n > 0 and event.relative.x > 30:
-			dragging = false
-			_on_prev()
+#		if n > 0 and event.relative.x > 30:
+#			dragging = false
+#			_on_prev()
 		if n < max_page and event.relative.x < - 30:
 			dragging = false
 			_on_next()
@@ -192,7 +192,7 @@ func _on_book_input(event : InputEvent) -> void:
 
 func _on_texte_2_finished():
 	get_tree().change_scene_to_file("res://bureau.tscn")
-#	OS.shell_open("https://prezi.com/view/k14lX8CVf1iuHFGx9UBB/")
+
 
 
 

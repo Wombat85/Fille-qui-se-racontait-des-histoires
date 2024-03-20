@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://besbb3rgsoilr"]
+[gd_scene load_steps=5 format=3 uid="uid://besbb3rgsoilr"]
 
 [ext_resource type="Script" path="res://scripts/lecture.gd" id="1_fitpa"]
 [ext_resource type="Texture2D" uid="uid://d2vtwsov1jv1m" path="res://art/lecture.jpg" id="1_m71hw"]
 [ext_resource type="PackedScene" uid="uid://bfth7v8y2xmkd" path="res://scenes/bouton_retour_bureau.tscn" id="3_ppshl"]
+[ext_resource type="AudioStream" uid="uid://3ig7facl1cev" path="res://audios/t7650dddd65.mp3" id="4_at3nt"]
 
 [node name="BU" type="Node2D"]
 script = ExtResource("1_fitpa")
@@ -13,3 +14,8 @@ texture = ExtResource("1_m71hw")
 
 [node name="Bouton retour bureau" parent="." instance=ExtResource("3_ppshl")]
 position = Vector2(3, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_at3nt")
+autoplay = true

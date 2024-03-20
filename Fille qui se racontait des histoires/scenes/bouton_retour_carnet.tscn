@@ -11,6 +11,7 @@ offset_left = 825.0
 offset_top = 32.0
 offset_right = 959.0
 offset_bottom = 99.0
+scale = Vector2(0.8, 0.8)
 theme = ExtResource("2_fu85b")
 text = "Retour"
 

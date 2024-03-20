@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpkvh0416aa0y"]
+
+[ext_resource type="Script" path="res://scripts/finale.gd" id="1_c4mmm"]
+[ext_resource type="Texture2D" uid="uid://ca2j5armr0b5o" path="res://art/fond.jpg" id="1_da51h"]
+[ext_resource type="Texture2D" uid="uid://cduf1iixfh3w6" path="res://art/05.png" id="2_tb358"]
+[ext_resource type="AudioStream" uid="uid://dk2l5v0vwywbp" path="res://audios/pagefinale.mp3" id="4_2doqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n24ui"]
+size = Vector2(147, 377)
+
+[node name="finale" type="Node2D"]
+script = ExtResource("1_c4mmm")
+
+[node name="fond" type="Sprite2D" parent="."]
+position = Vector2(613, 324.5)
+scale = Vector2(1.7075, 1.96222)
+texture = ExtResource("1_da51h")
+
+[node name="05" type="Sprite2D" parent="."]
+position = Vector2(601, 319)
+scale = Vector2(0.97, 0.97)
+texture = ExtResource("2_tb358")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(990, 554)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 2
+position = Vector2(9.5, -81.5)
+shape = SubResource("RectangleShape2D_n24ui")
+
+[node name="Texte3" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_2doqf")
+autoplay = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

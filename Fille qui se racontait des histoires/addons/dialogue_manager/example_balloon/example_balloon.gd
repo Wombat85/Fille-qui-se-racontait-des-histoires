@@ -11,7 +11,7 @@ const SKIP_ACTION = &"ui_cancel"
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-
+#@onready var _is_paused: bool = false
 ## The dialogue resource
 var resource: DialogueResource
 
@@ -34,6 +34,7 @@ var dialogue_line: DialogueLine:
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
 			queue_free()
+#			get_tree().paused = _is_paused
 			return
 
 		# If the node isn't ready yet then none of the labels will be ready yet either
@@ -54,7 +55,8 @@ var dialogue_line: DialogueLine:
 		# Show our balloon
 		balloon.show()
 		will_hide_balloon = false
-
+#		get_tree().paused = !_is_paused
+		
 		dialogue_label.show()
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()

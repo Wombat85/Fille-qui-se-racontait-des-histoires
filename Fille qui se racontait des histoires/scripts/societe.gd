@@ -15,6 +15,6 @@ func _on_jeuxsoc_mouse_exited():
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
-func _on_jeuxsoc_input_event(viewport, event, shape_idx):
+func _on_jeuxsoc_input_event(_viewport, _event, _shape_idx):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		get_tree().change_scene_to_file("res://scenes/jeuxsociete.tscn")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://df76fxtxaar23"]
 
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_fjs5b"]
 [ext_resource type="AudioStream" uid="uid://dn0nt5juxkrwt" path="res://audios/LukeHall-Dystopia.mp3" id="1_r6rgo"]
 [ext_resource type="Texture2D" uid="uid://dkrcupnc1rshy" path="res://art/Couv.jpg" id="2_yp5fe"]
 [ext_resource type="Theme" uid="uid://caa1cfafpetid" path="res://themes/bouton.tres" id="3_2ayy3"]
-[ext_resource type="Script" path="res://scripts/Jouer.gd" id="4_ruyc8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cib68"]
 bg_color = Color(0, 0, 0, 1)
@@ -23,6 +23,7 @@ expand_margin_right = 27.0
 expand_margin_bottom = 20.0
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_fjs5b")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 3191.0
@@ -40,22 +41,33 @@ texture = ExtResource("2_yp5fe")
 
 [node name="Jouer" type="Button" parent="."]
 offset_left = 190.0
-offset_top = 197.0
+offset_top = 127.0
 offset_right = 419.0
-offset_bottom = 286.0
+offset_bottom = 216.0
 theme = ExtResource("3_2ayy3")
 theme_override_font_sizes/font_size = 50
 text = "Jouer"
-script = ExtResource("4_ruyc8")
 
 [node name="Crédits" type="Button" parent="."]
 offset_left = 220.0
-offset_top = 363.0
+offset_top = 293.0
 offset_right = 392.0
-offset_bottom = 432.0
+offset_bottom = 362.0
 theme = ExtResource("3_2ayy3")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_hxqav")
 text = "Crédits"
 
-[connection signal="pressed" from="Jouer" to="Jouer" method="_on_pressed"]
+[node name="Quitter" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 450.0
+offset_right = 396.0
+offset_bottom = 519.0
+theme = ExtResource("3_2ayy3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxqav")
+text = "Quitter"
+
+[connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="Crédits" to="." method="_on_crédits_pressed"]
+[connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]

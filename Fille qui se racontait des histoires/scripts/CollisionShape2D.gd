@@ -13,9 +13,9 @@ func _ready():
 	#pass
 
 
-func _on_zone_area_entered(area):
+func _on_zone_area_entered(_area):
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 
-func _on_zone_area_exited(area):
+func _on_zone_area_exited(_area):
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)

@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5k0mlubb1m3m"]
+
+[ext_resource type="Script" path="res://scripts/crédits.gd" id="1_muqal"]
+[ext_resource type="Theme" uid="uid://b8n3gwk13upsv" path="res://themes/bouton_scenes.tres" id="2_ym1li"]
+[ext_resource type="Texture2D" uid="uid://ca2j5armr0b5o" path="res://art/fond.jpg" id="3_8o4gw"]
+
+[node name="crédits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_muqal")
+
+[node name="Retour" type="Button" parent="."]
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = 975.0
+offset_top = 34.0
+offset_right = 1109.0
+offset_bottom = 101.0
+theme = ExtResource("2_ym1li")
+text = "Retour"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 82.0
+offset_top = 15.0
+offset_right = 928.0
+offset_bottom = 682.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=red]Conception et programmation :[/color] Marie Demiautte
+
+[color=gray]Prises de vue[/color] : Damien Demiautte
+
+[color=red]Musiques :[/color][i] Dystopia[/i], de Luke Hall (CC-BY-SA) ; [i]Cath-Ghost[/i], de Hicham Chahidi
+
+[color=gray]Voix : [/color]Marie Demiautte
+
+[color=red]Enregistrement voix : [/color]Alexis Clercin
+
+[color=gray]Sons additionnels :[/color] Joseph SARDIN - La Sonotheque.org (contenus libres de droits)
+
+[color= red]Tests : [/color]Damien Demiautte, Lauris Geoffret
+
+[color=gray]Animateur d'anniversaires : [/color]Damien Demiautte
+
+[color=red]Soutien moral : [/color]Lauris Geoffret, Damien Demiautte
+
+[color=gray]Enfants : [/color]Augustin, Gaspard et Héloïse Demiautte
+(Les autres enfants ont été, dans la mesure du possible, rendus non reconnaissables. 
+En dépit de tout droit à l'image, les adultes ont été présumés consentants.)
+
+[color=red]Placement de produit involontaire et non rémunéré : [/color]Coca-Cola et Lindt
+
+[color=gray]Meuble : [/color]bureau Fjord, de l'enseigne Cocktail Scandinave
+
+[color=red][b]Aucun tiroir n'a été maltraité pendant la conception de ce jeu."
+fit_content = true
+
+[node name="Fond" type="Sprite2D" parent="."]
+position = Vector2(596.5, 330.5)
+scale = Vector2(1.58625, 1.76222)
+texture = ExtResource("3_8o4gw")
+
+[connection signal="pressed" from="Retour" to="." method="_on_retour_pressed"]
